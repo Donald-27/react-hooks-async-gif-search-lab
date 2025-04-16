@@ -1,19 +1,17 @@
 import React from "react";
 
-function NavBar({ color, title }) {
-  const colors = {
-    black: "navbar-inverse",
-    white: "navbar-default",
+function NavBar({ color = "black", title = "Giphy Search" }) {
+  const navStyle = {
+    backgroundColor: color,
+    color: "white",
+    padding: "1rem",
+    textAlign: "center",
   };
 
   return (
-    <nav className={`navbar ${colors[color]}`}>
-      <div className="container-fluid">
-        <div className="navbar-header">
-          <span className="navbar-brand">{title}</span>
-        </div>
-      </div>
-    </nav>
+    <div style={navStyle}>
+      <h1>{title}</h1>
+    </div>
   );
 }
 
